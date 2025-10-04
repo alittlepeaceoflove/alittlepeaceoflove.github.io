@@ -1,4 +1,4 @@
-=<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,23 +8,22 @@
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <!-- Main content wrapper -->
+  <!-- Navigation (moved OUTSIDE of main) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">JC Metrics</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="reports.html">Reports</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <!-- Main content -->
   <main class="resume-page">
-    <!-- Navigation -->
-    <header>
-      <nav class="navbar">
-        <div class="logo"><a href="index.html">JC Metrics</a></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html" class="active">Resume</a></li>
-          <li><a href="reports.html">Reports</a></li>
-        </ul>
-        <button class="menu-toggle">☰</button>
-      </nav>
-    </header>
-    
-    <!-- Resume Section -->
     <section>
       <h1>Resume</h1>
       <p class="resume-download">
@@ -33,7 +32,7 @@
       <iframe src="assets/pdfs/JulianCosta_Resume.pdf" width="100%" height="900px" title="Julian Costa Resume"></iframe>
     </section>
   </main>
-  
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Julian L. Costa | jcmetrics.com</p>
