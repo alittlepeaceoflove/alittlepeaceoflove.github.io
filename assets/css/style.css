@@ -47,6 +47,8 @@ main {
   padding: 1rem 2rem;
   color: var(--white);
   position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
 }
 
 .logo a {
@@ -236,14 +238,33 @@ footer {
   margin: 0 auto 1rem auto;
 }
 
+/* Content wrapper for constrained pages */
+.about-page > section,
+.reports-page > h1,
+.reports-page > .intro-text,
+.reports-page > .grid {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-page > section {
+  max-width: 900px;
+}
+
 /* =========================
    Resume Page
 ========================= */
 .resume-page {
-  max-width: 1000px;
-  margin: auto;
   padding: 2rem;
   text-align: center;
+  align-items: center;
+}
+
+.resume-page > section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .resume-page h1 {
@@ -268,14 +289,31 @@ footer {
   background: #022c43;
 }
 
+.resume-page iframe {
+  width: 100%;
+  max-width: 900px;
+  height: 1100px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsive iframe */
+@media (max-width: 768px) {
+  .resume-page iframe {
+    height: 800px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-page iframe {
+    height: 600px;
+  }
+}
+
 /* =========================
    Reports Page
 ========================= */
-.reports-page {
-  max-width: 1100px;
-  margin: auto;
-}
-
 .reports-page h1 {
   margin-bottom: 1rem;
 }
