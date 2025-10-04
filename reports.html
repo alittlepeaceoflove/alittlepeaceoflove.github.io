@@ -8,23 +8,22 @@
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <!-- Main content wrapper -->
+  <!-- Navigation (moved OUTSIDE of main) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="index.html">JC Metrics</a></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="reports.html" class="active">Reports</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <!-- Main content -->
   <main class="reports-page">
-    <!-- Navigation -->
-    <header>
-      <nav class="navbar">
-        <div class="logo"><a href="index.html">JC Metrics</a></div>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="reports.html" class="active">Reports</a></li>
-        </ul>
-        <button class="menu-toggle">☰</button>
-      </nav>
-    </header>
-    
-    <!-- Reports Hub -->
     <h1>Reports & Analyses</h1>
     <p class="intro-text">
       Below is a collection of my data analyses and reports, exported via Quarto and other tools. 
@@ -69,7 +68,7 @@
       </div>
     </div>
   </main>
-  
+
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Julian L. Costa | jcmetrics.com</p>
