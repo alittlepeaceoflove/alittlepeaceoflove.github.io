@@ -327,3 +327,32 @@ footer {
   margin-bottom: 2rem;
   color: var(--text);
 }
+
+/* =========================
+   Headshot Link Hover Effect
+========================= */
+.headshot-link {
+  display: inline-block;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.headshot-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Reuse your existing headshot class */
+.headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.headshot-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 0 3px rgba(0, 65, 106, 0.2);
+}
+
