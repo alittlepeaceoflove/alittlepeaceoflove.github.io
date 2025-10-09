@@ -49,19 +49,24 @@ main {
   justify-content: space-between;
   align-items: center;
   background: var(--dark);
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   color: var(--white);
-  position: relative;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
 }
 
 .logo a {
-  text-decoration: none; 
-  color: inherit; 
-  font-weight: bold;
+  display: flex;
+  align-items: center;
 }
 
+.logo-img {
+  height: 40px;       /* keeps it small */
+  width: auto;        /* keeps proportions */
+  border-radius: 50%; /* optional circle */
+  display: block;
+}
+
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -139,6 +144,7 @@ main {
   display: inline-block;
   font-weight: bold;
   transition: background 0.3s, color 0.3s;
+  cursor: pointer;
 }
 
 .hero .btn:hover {
@@ -335,6 +341,9 @@ footer {
   color: var(--primary);
 }
 
+/* =========================
+   Services Page
+========================= */
 .service-packages {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -342,7 +351,7 @@ footer {
   margin-top: 2rem;
 }
 
-.package.card {
+.service-packages .package {
   background: #fff;
   border-radius: 10px;
   padding: 1.5rem;
@@ -350,27 +359,26 @@ footer {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.package.card:hover {
+.service-packages .package:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
 
-.package h2 {
+.service-packages .package h2 {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
 }
 
-.package p {
+.service-packages .package p {
   margin-bottom: 1rem;
 }
 
-.package ul {
+.service-packages .package ul {
   margin: 0 0 1rem 1.2rem;
 }
 
-.package .price {
+.service-packages .package .price {
   font-weight: bold;
   color: #444;
   margin-top: 1rem;
 }
-
