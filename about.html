@@ -1,88 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About | JC Metrics</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/main.js" defer></script>
-  <style>
-    /* Global text */
-    body {
-      font-family: Calibri, Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      color: #222;
-      background: #fff;
-    }
-
-    main.about-page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    .about-page .intro,
-    .about-page .bio {
-      margin-bottom: 2rem;
-    }
-
-    .about-page p {
-      margin-bottom: 1.2rem;
-      text-align: left;
-      font-size: 1rem;
-    }
-
-    .headshot {
-      max-width: 180px;
-      border-radius: 50%;
-      display: block;
-      margin: 0 auto 1rem;
-    }
-
-    h1, h2 {
-      text-align: center;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-    }
-
-    /* Mobile tweaks */
-    @media (max-width: 768px) {
-      main.about-page {
-        padding: 15px;
-      }
-
-      .about-page p {
-        font-size: 0.95rem;
-        line-height: 1.5;
-      }
-
-      h1 {
-        font-size: 1.6rem;
-      }
-
-      h2 {
-        font-size: 1.3rem;
-      }
-
-      .headshot {
-        max-width: 140px;
-      }
-    }
-  </style>
 </head>
-<body>
-  <!-- Header -->
+<body class="about-page">
+
+  <!-- Navigation -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -100,40 +27,52 @@
     </nav>
   </header>
 
-  <!-- Main content wrapper -->
-  <main class="about-page">
-    <!-- About Section -->
-    <section class="intro">
-      <img src="assets/images/headshot.jpg" alt="Julian L. Costa" class="headshot">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
       <h1>About Me</h1>
-      <p>
-        My name is Julian. I’m a statistician exploring how data can improve the lives of humans and animals. I’ve worked with teams across various fields to help make sense of complex information and highlight the impact of their work. My goal is to help researchers, advocates, and changemakers tell clear, compelling stories with data and contribute to a better world.
-      </p>
-    </section>
+      <p>Data for change. Stories that matter. Solutions that serve.</p>
+      <a href="contact.html" class="btn">Contact Me</a>
+    </div>
+  </section>
 
-    <section class="bio">
-      <h2>Professional Background</h2>
+  <!-- Intro Section -->
+  <section class="intro">
+    <img src="assets/images/headshot.jpg" alt="Julian L. Costa" class="headshot">
+    <p>
+      My name is Julian. I’m a statistician exploring how data can improve the lives of humans and animals. I’ve worked with teams across various fields to help make sense of complex information and highlight the impact of their work. My goal is to help researchers, advocates, and changemakers tell clear, compelling stories with data and contribute to a better world.
+    </p>
+  </section>
 
-      <h3>Using Data to Support Communities</h3>
-      <p>
-        I oversee research and evaluation for federally funded prevention initiatives, including the Substance Abuse Block Grant, Prevention Partnership Grant (PPG), and the State Opioid Response Grant (SOR-P). I also conduct data analysis for a wide range of behavioral health and community programs, such as Case Management, Outpatient Treatment, Crisis Stabilization, Detoxification, Assisted Living, Mobile Crisis Response Teams (MRT), and Community Action Teams (CAT). My work focuses on program evaluation, incident reporting, satisfaction outcomes, and data-driven improvements to ensure services remain effective, accountable, and responsive to community needs.
-      </p>
-
-      <h3>Contributing to Public Health Research</h3>
-      <p>
-        I have conducted public health and epidemiological analyses on a range of population health topics, including reproductive health outcomes, the relationship between physical activity and cardiovascular risk factors, and inflammatory markers across different treatment exposures. My work has also included studying health disparities in underserved and minority populations, with a focus on cardiometabolic outcomes.
-      </p>
-
-      <h3>Protecting Animals Through Science</h3>
-      <p>
-        I have also contributed to wildlife toxicology research, analyzing anticoagulant rodenticide (AR) exposure in raptors. This work included examining co-exposure patterns, toxic burdens, and clinical outcomes across multiple species. The analysis provided insights into geographic and ecological patterns of AR exposure, with implications for conservation and public health regarding secondary poisoning risks.
-      </p>
-    </section>
-  </main>
+  <!-- Professional Background Section -->
+  <section class="featured">
+    <h2>Professional Background</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Using Data to Support Communities</h3>
+        <p>
+          I oversee research and evaluation for federally funded prevention initiatives, including the Substance Abuse Block Grant, Prevention Partnership Grant (PPG), and the State Opioid Response Grant (SOR-P). I also conduct data analysis for a wide range of behavioral health and community programs, such as Case Management, Outpatient Treatment, Crisis Stabilization, Detoxification, Assisted Living, Mobile Crisis Response Teams (MRT), and Community Action Teams (CAT). My work focuses on program evaluation, incident reporting, satisfaction outcomes, and data-driven improvements to ensure services remain effective, accountable, and responsive to community needs.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Contributing to Public Health Research</h3>
+        <p>
+          I have conducted public health and epidemiological analyses on a range of population health topics, including reproductive health outcomes, the relationship between physical activity and cardiovascular risk factors, and inflammatory markers across different treatment exposures. My work has also included studying health disparities in underserved and minority populations, with a focus on cardiometabolic outcomes.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Protecting Animals Through Science</h3>
+        <p>
+          I have also contributed to wildlife toxicology research, analyzing anticoagulant rodenticide (AR) exposure in raptors. This work included examining co-exposure patterns, toxic burdens, and clinical outcomes across multiple species. The analysis provided insights into geographic and ecological patterns of AR exposure, with implications for conservation and public health regarding secondary poisoning risks.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Julian L. Costa | jcmetrics.com</p>
   </footer>
+
 </body>
 </html>
