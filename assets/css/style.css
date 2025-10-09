@@ -155,6 +155,22 @@ main {
   color: var(--text);
 }
 
+.headshot {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+@media (max-width: 480px) {
+  .headshot {
+    width: 120px;
+    height: 120px;
+  }
+}
+
 /* =========================
    Featured Section / Cards
 ========================= */
