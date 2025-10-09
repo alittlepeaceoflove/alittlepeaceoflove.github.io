@@ -60,7 +60,7 @@ main {
 }
 
 .logo-img {
-  height: 10px;       /* keeps it small */
+  height: 50px;       /* keeps it small */
   width: auto;        /* keeps proportions */
   border-radius: 50%; /* optional circle */
   display: block;
