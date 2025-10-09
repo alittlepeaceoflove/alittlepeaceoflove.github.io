@@ -28,8 +28,8 @@ html, body {
 }
 
 body {
-  font-family: Calibri, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Segoe UI", Calibri, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
   color: var(--text);
   background: #fff;
 }
@@ -39,6 +39,19 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
+}
+
+/* =========================
+   Typography
+========================= */
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
 }
 
 /* =========================
@@ -60,9 +73,9 @@ main {
 }
 
 .logo-img {
-  height: 75px;       /* keeps it small */
-  width: auto;        /* keeps proportions */
-  border-radius: 50%; /* optional circle */
+  height: 75px;
+  width: auto;
+  border-radius: 50%;
   display: block;
 }
 
@@ -124,14 +137,20 @@ main {
    Hero Section
 ========================= */
 .hero {
-  background: linear-gradient(135deg, var(--primary), #E4E5E6);
+  background: linear-gradient(135deg, var(--primary), #4a90e2);
   color: var(--white);
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 5rem 1rem;
 }
 
 .hero h1 {
-  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.95;
 }
 
 .hero .btn {
@@ -157,7 +176,11 @@ main {
 ========================= */
 .intro {
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  color: #333;
 }
 
 .headshot {
@@ -173,41 +196,65 @@ main {
 ========================= */
 .featured,
 .reports-page {
-  padding: 2rem;
+  padding: 3rem 1rem;
   text-align: center;
+}
+
+.featured h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--primary);
 }
 
 .grid {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   margin-top: 1rem;
 }
 
+/* =========================
+   Service Cards
+========================= */
 .card {
-  background: var(--light);
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-.card a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--primary);
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  margin-bottom: 0.75rem;
+  color: #555;
+}
+
+.card ul {
+  margin: 0 0 1rem 1.2rem;
+  padding: 0;
+}
+
+.card li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.card .price {
+  font-size: 1rem;
   font-weight: bold;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.card a:hover {
-  color: #022c43;
+  color: var(--primary);
+  margin-top: 1rem;
 }
 
 /* =========================
@@ -218,7 +265,9 @@ footer {
   padding: 1rem;
   background: var(--dark);
   color: var(--white);
-  margin-top: auto; /* pushes it down */
+  margin-top: auto;
+  font-size: 0.9rem;
+  opacity: 0.9;
 }
 
 /* =========================
