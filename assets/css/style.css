@@ -3,15 +3,11 @@
 ========================= */
 :root {
   --primary: #00416A;
-  --dark: #222;
-  --light: #f9f9f9;
-  --text: #444;
+  --lightblue-start: #cfe7ff;
+  --lightblue-end: #e6f2ff;
+  --text: #333;
   --white: #fff;
-}
-
-html {
-  margin: 0;
-  padding: 0;
+  --dark: #222;
 }
 
 * {
@@ -20,38 +16,20 @@ html {
   box-sizing: border-box;
 }
 
-/* Make footer stick at bottom */
 html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-body {
   font-family: "Segoe UI", Calibri, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.7;
   color: var(--text);
-  background: #fff;
+  background: var(--white);
 }
 
-/* main grows to fill space */
 main {
   flex: 1;
   display: flex;
   flex-direction: column;
-}
-
-/* =========================
-   Typography
-========================= */
-h1, h2, h3 {
-  font-weight: 600;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-
-p {
-  margin-bottom: 1rem;
 }
 
 /* =========================
@@ -64,7 +42,6 @@ p {
   background: var(--dark);
   padding: 0.5rem 2rem;
   color: var(--white);
-  width: 100%;
 }
 
 .logo a {
@@ -76,10 +53,8 @@ p {
   height: 75px;
   width: auto;
   border-radius: 50%;
-  display: block;
 }
 
-/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -110,7 +85,6 @@ p {
   cursor: pointer;
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -137,10 +111,10 @@ p {
    Hero Section
 ========================= */
 .hero {
-  background: linear-gradient(135deg, var(--primary), #4a90e2);
-  color: var(--white);
+  background: linear-gradient(135deg, var(--lightblue-start), var(--lightblue-end));
   text-align: center;
   padding: 5rem 1rem;
+  color: var(--dark);
 }
 
 .hero h1 {
@@ -154,8 +128,8 @@ p {
 }
 
 .hero .btn {
-  background: var(--white);
-  color: var(--primary);
+  background: var(--primary);
+  color: var(--white);
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 5px;
@@ -163,16 +137,14 @@ p {
   display: inline-block;
   font-weight: bold;
   transition: background 0.3s, color 0.3s;
-  cursor: pointer;
 }
 
 .hero .btn:hover {
-  background: var(--primary);
-  color: var(--white);
+  background: var(--dark);
 }
 
 /* =========================
-   Intro / Headshot
+   Intro Section
 ========================= */
 .intro {
   text-align: center;
@@ -180,22 +152,13 @@ p {
   max-width: 800px;
   margin: 0 auto;
   font-size: 1.05rem;
-  color: #333;
-}
-
-.headshot {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
+  color: var(--text);
 }
 
 /* =========================
-   Featured Grid (Homepage & Reports)
+   Featured Section / Cards
 ========================= */
-.featured,
-.reports-page {
+.featured {
   padding: 3rem 1rem;
   text-align: center;
 }
@@ -213,16 +176,13 @@ p {
   margin-top: 1rem;
 }
 
-/* =========================
-   Service Cards
-========================= */
 .card {
   background: var(--white);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
   text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
@@ -233,6 +193,7 @@ p {
 .card h3 {
   font-size: 1.3rem;
   margin-bottom: 0.75rem;
+  color: var(--primary);
 }
 
 .card p {
@@ -257,6 +218,10 @@ p {
   margin-top: 1rem;
 }
 
+.card.full-width {
+  grid-column: 1 / -1;
+}
+
 /* =========================
    Footer
 ========================= */
@@ -268,166 +233,4 @@ footer {
   margin-top: auto;
   font-size: 0.9rem;
   opacity: 0.9;
-}
-
-/* =========================
-   About Page
-========================= */
-.about-page {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.about-page h1,
-.about-page h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.about-page p {
-  margin-bottom: 1.5rem;
-  text-align: justify;
-}
-
-.about-page .headshot {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto 1rem auto;
-}
-
-/* Content wrapper for constrained pages */
-.about-page > section,
-.reports-page > h1,
-.reports-page > .intro-text,
-.reports-page > .grid {
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about-page > section {
-  max-width: 900px;
-}
-
-/* =========================
-   Resume Page
-========================= */
-.resume-page {
-  padding: 2rem;
-  text-align: center;
-  align-items: center;
-}
-
-.resume-page > section {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.resume-page h1 {
-  margin-bottom: 1rem;
-}
-
-.resume-download {
-  margin-bottom: 1.5rem;
-}
-
-.resume-download a {
-  background: var(--primary);
-  color: var(--white);
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.resume-download a:hover {
-  background: #022c43;
-}
-
-.resume-page iframe {
-  width: 100%;
-  max-width: 900px;
-  height: 1100px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-/* Responsive iframe */
-@media (max-width: 768px) {
-  .resume-page iframe {
-    height: 800px;
-  }
-}
-
-@media (max-width: 480px) {
-  .resume-page iframe {
-    height: 600px;
-  }
-}
-
-/* =========================
-   Reports Page
-========================= */
-.reports-page h1 {
-  margin-bottom: 1rem;
-}
-
-.reports-page .intro-text {
-  margin-bottom: 2rem;
-  color: var(--text);
-}
-
-.bio h3 {
-  margin-top: 2rem;
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
-/* =========================
-   Services Page
-========================= */
-.service-packages {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.service-packages .package {
-  background: #fff;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.service-packages .package:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
-
-.service-packages .package h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-
-.service-packages .package p {
-  margin-bottom: 1rem;
-}
-
-.service-packages .package ul {
-  margin: 0 0 1rem 1.2rem;
-}
-
-.service-packages .package .price {
-  font-weight: bold;
-  color: #444;
-  margin-top: 1rem;
 }
