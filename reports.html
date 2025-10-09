@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Reports | JC Metrics</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/main.js" defer></script>
 </head>
-<body>
+<body class="reports-page">
+
   <!-- Navigation -->
   <header>
     <nav class="navbar">
@@ -26,55 +27,78 @@
     </nav>
   </header>
 
-  <!-- Main content -->
-  <main class="reports-page">
-    <h1>Reports & Analyses</h1>
-    <p class="intro-text">
-      Below is a collection of my data analyses and reports, spanning the various domains I’ve contributed to. Each report focuses on a specific question or theme and walks through the process of data collection, cleaning, organization, and analysis. These projects helped me and my collaborators uncover insights that supported stronger decisions and more meaningful outcomes in our work.
-    </p>
-    <div class="grid">
-      <!-- Report 1 -->
-      <div class="card">
-        <h3>Anticoagulant Rodenticide Exposure in South Carolina Raptors</h3>
-        <p>
-          Wildlife toxicology study examining anticoagulant rodenticide (AR) exposure in 
-          raptors admitted across South Carolina. This report combines multi-year toxicology 
-          results with demographic and necropsy data to evaluate patterns of single and 
-          multi-compound exposure. Findings highlight regional risk factors and provide 
-          important insights for environmental health and conservation efforts.
-        </p>
-        <a href="reports/rodenticide-analysis.html" target="_blank">View Report</a>
+  <!-- Main Content -->
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Reports & Analyses</h1>
+        <p>Explore real-world insights from statistical modeling, public health research, and policy evaluation.</p>
+        <a href="contact.html" class="btn">Work With Me</a>
       </div>
-      <!-- Report 2 -->
-      <div class="card">
-        <h3>Predictors of Heart Disease: Statistical Modeling and Testing</h3>
-        <p>
-          Research project analyzing predictors of heart disease using the CDC's 
-          Behavioral Risk Factor Surveillance System dataset. The analysis applies 
-          logistic regression, chi-square testing, and interaction modeling to explore 
-          lifestyle, demographic, and clinical factors. Results emphasize both individual 
-          health behaviors and broader socioeconomic influences on cardiovascular risk.
-        </p>
-        <a href="reports/heart_disease-analysis.html" target="_blank">View Report</a>
+    </section>
+
+    <!-- Intro Text -->
+    <section class="intro">
+      <p>
+        Below is a collection of my data analyses and reports, spanning the various domains I’ve contributed to. Each report focuses on a specific question or theme and walks through the process of data collection, cleaning, organization, and analysis. These projects helped me and my collaborators uncover insights that supported stronger decisions and more meaningful outcomes in our work.
+      </p>
+    </section>
+
+    <!-- Report Cards -->
+    <section class="featured">
+      <h2>Featured Reports</h2>
+      <div class="grid">
+
+        <!-- Report 1 -->
+        <div class="card">
+          <h3>Anticoagulant Rodenticide Exposure in South Carolina Raptors</h3>
+          <p>
+            Wildlife toxicology study examining anticoagulant rodenticide (AR) exposure in 
+            raptors admitted across South Carolina. This report combines multi-year toxicology 
+            results with demographic and necropsy data to evaluate patterns of single and 
+            multi-compound exposure. Findings highlight regional risk factors and provide 
+            important insights for environmental health and conservation efforts.
+          </p>
+          <a href="reports/rodenticide-analysis.html" target="_blank">View Report</a>
+        </div>
+
+        <!-- Report 2 -->
+        <div class="card">
+          <h3>Predictors of Heart Disease: Statistical Modeling and Testing</h3>
+          <p>
+            Research project analyzing predictors of heart disease using the CDC's 
+            Behavioral Risk Factor Surveillance System dataset. The analysis applies 
+            logistic regression, chi-square testing, and interaction modeling to explore 
+            lifestyle, demographic, and clinical factors. Results emphasize both individual 
+            health behaviors and broader socioeconomic influences on cardiovascular risk.
+          </p>
+          <a href="reports/heart_disease-analysis.html" target="_blank">View Report</a>
+        </div>
+
+        <!-- Report 3 -->
+        <div class="card">
+          <h3>Demographic and Behavioral Correlates of Driving Under the Influence of Alcohol</h3>
+          <p>
+            Statistical analysis of the 2023 National Survey on Drug Use and Health (NSDUH) 
+            to identify demographic and behavioral factors linked to alcohol-impaired driving. 
+            The report uses logistic regression, stepwise model selection, and ROC analysis 
+            to evaluate predictors including binge drinking, education, and employment status. 
+            Results provide evidence to inform prevention and public health strategies.
+          </p>
+          <a href="reports/dui-analysis.html" target="_blank">View Report</a>
+        </div>
+
       </div>
-      <!-- Report 3 -->
-      <div class="card">
-        <h3>Demographic and Behavioral Correlates of Driving Under the Influence of Alcohol</h3>
-        <p>
-          Statistical analysis of the 2023 National Survey on Drug Use and Health (NSDUH) 
-          to identify demographic and behavioral factors linked to alcohol-impaired driving. 
-          The report uses logistic regression, stepwise model selection, and ROC analysis 
-          to evaluate predictors including binge drinking, education, and employment status. 
-          Results provide evidence to inform prevention and public health strategies.
-        </p>
-        <a href="reports/dui-analysis.html" target="_blank">View Report</a>
-      </div>
-    </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2025 Julian L. Costa | jcmetrics.com</p>
   </footer>
+
 </body>
 </html>
