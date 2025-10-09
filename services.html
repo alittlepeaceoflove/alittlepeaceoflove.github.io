@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume | JC Metrics</title>
+  <title>Services | JC Metrics</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <!-- Navigation (moved OUTSIDE of main) -->
+  <!-- Navigation -->
   <header>
     <nav class="navbar">
       <div class="logo"><a href="index.html">JC Metrics</a></div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="reports.html">Reports</a></li>
       </ul>
       <button class="menu-toggle">☰</button>
@@ -23,13 +23,64 @@
   </header>
 
   <!-- Main content -->
-  <main class="resume-page">
+  <main class="services-page">
     <section>
-      <h1>Resume</h1>
-      <p class="resume-download">
-        <a href="assets/pdfs/JulianCosta_Resume.pdf" download>Download Resume (PDF)</a>
-      </p>
-      <iframe src="assets/pdfs/JulianCosta_Resume.pdf" width="100%" height="900px" title="Julian Costa Resume"></iframe>
+      <h1>Services</h1>
+      <p>I help organizations, researchers, and public health teams turn messy data into clear insights. Below are the service packages I offer. Each package is designed to match the needs of different types of projects — from cleaning and basic summaries to advanced modeling and ongoing consultation.</p>
+    </section>
+
+    <!-- Service Packages -->
+    <section class="service-packages">
+      <div class="package">
+        <h2>Foundations Package</h2>
+        <p><strong>Best for:</strong> small nonprofits, educators, or early-stage researchers needing structured data.</p>
+        <ul>
+          <li>Data cleaning & standardization (Excel, CSV, survey data)</li>
+          <li>Basic descriptive statistics (counts, averages, charts)</li>
+          <li>Simple data visualizations & reports</li>
+          <li>30-minute consultation call</li>
+        </ul>
+        <p class="price">Starting at $250–500</p>
+      </div>
+
+      <div class="package">
+        <h2>Insights Package</h2>
+        <p><strong>Best for:</strong> teams seeking actionable findings from interventions and surveys.</p>
+        <ul>
+          <li>Everything in Foundations</li>
+          <li>Comparative testing (t-tests, chi-square, ANOVA, etc.)</li>
+          <li>Pre/post intervention analysis</li>
+          <li>Comprehensive written report with visuals</li>
+          <li>1-hour live walkthrough & Q&A</li>
+        </ul>
+        <p class="price">Starting at $750–1,500</p>
+      </div>
+
+      <div class="package">
+        <h2>Advanced Analytics Package</h2>
+        <p><strong>Best for:</strong> academic, policy, or research groups working with complex datasets.</p>
+        <ul>
+          <li>Everything in Insights</li>
+          <li>Regression, logistic, & multilevel modeling</li>
+          <li>Bootstrapping & resampling methods</li>
+          <li>Machine learning models (predictive & classification)</li>
+          <li>Technical appendix with reproducible code</li>
+          <li>Strategic 1–2 hour consultation session</li>
+        </ul>
+        <p class="price">Starting at $2,000–5,000+</p>
+      </div>
+
+      <div class="package">
+        <h2>Consulting Retainer</h2>
+        <p><strong>Best for:</strong> organizations or researchers needing ongoing statistical support.</p>
+        <ul>
+          <li>Monthly retainer (flexible hours)</li>
+          <li>Data consulting & project advising</li>
+          <li>Live problem-solving sessions</li>
+          <li>Quick turnaround data checks</li>
+        </ul>
+        <p class="price">$500–1,500/month</p>
+      </div>
     </section>
   </main>
 
