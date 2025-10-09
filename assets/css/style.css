@@ -335,3 +335,42 @@ footer {
   color: var(--primary);
 }
 
+.service-packages {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.package.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.package.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.package h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.package p {
+  margin-bottom: 1rem;
+}
+
+.package ul {
+  margin: 0 0 1rem 1.2rem;
+}
+
+.package .price {
+  font-weight: bold;
+  color: #444;
+  margin-top: 1rem;
+}
+
