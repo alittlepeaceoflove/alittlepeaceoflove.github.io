@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Inquiry | JC Metrics</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="inquiry-page">
+
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/images/logo.png" alt="JC Metrics Logo" class="logo-img">
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="reports.html">Reports</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="menu-toggle">☰</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Service Inquiry</h1>
+        <p>Confirm your service and send me your details</p>
+      </div>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section class="intro">
+      <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+        <label for="service">Selected Service</label>
+        <input type="text" id="service" name="service" readonly>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6"></textarea>
+
+        <button type="submit" class="btn">Submit Inquiry</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Julian L. Costa | jcmetrics.com</p>
+  </footer>
+
+  <script>
+    // Autofill service from URL parameter
+    const params = new URLSearchParams(window.location.search);
+    const service = params.get("service");
+    if(service) {
+      document.getElementById("service").value = service;
+    }
+  </script>
+</body>
+</html>
