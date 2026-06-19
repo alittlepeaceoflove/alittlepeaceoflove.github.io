@@ -29,18 +29,27 @@
 
   <main>
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero light-blue-hero">
       <div class="hero-content">
-        <h1>Service Inquiry</h1>
-        <p>Confirm your service and send me your details</p>
+        <h1>Start a Project</h1>
+        <p>Tell me about your project and I'll get back to you within 24 hours.</p>
       </div>
     </section>
 
     <!-- Inquiry Form -->
     <section class="intro">
       <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
-        <label for="service">Selected Service</label>
-        <input type="text" id="service" name="service" readonly>
+
+        <label for="service">Service you're interested in</label>
+        <select id="service" name="service" required>
+          <option value="">— Please select —</option>
+          <option value="Foundations">Foundations — From $400</option>
+          <option value="Insights">Insights — From $1,200</option>
+          <option value="Analytics">Analytics — From $3,000</option>
+          <option value="Ongoing Partnership">Ongoing Partnership — From $1,000/month</option>
+          <option value="Add-ons / Custom Work">Add-ons / Custom Work</option>
+          <option value="Not sure yet">Not sure yet — let's talk</option>
+        </select>
 
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -48,10 +57,10 @@
         <label for="email">Email</label>
         <input type="email" id="email" name="_replyto" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6"></textarea>
+        <label for="message">Tell me about your project</label>
+        <textarea id="message" name="message" rows="6" placeholder="What are you working on? What questions do you need answered? Any deadlines or budget constraints?" required></textarea>
 
-        <button type="submit" class="btn">Submit Inquiry</button>
+        <button type="submit" class="btn">Send Inquiry</button>
       </form>
     </section>
   </main>
@@ -61,11 +70,19 @@
   </footer>
 
   <script>
-    // Autofill service from URL parameter
+    // Autofill service from URL parameter, if present
     const params = new URLSearchParams(window.location.search);
-    const service = params.get("service");
-    if(service) {
-      document.getElementById("service").value = service;
+    const serviceParam = params.get("service");
+    if (serviceParam) {
+      const select = document.getElementById("service");
+      // Try to match by value first, then by partial match
+      const option = Array.from(select.options).find(opt => 
+        opt.value === serviceParam || 
+        opt.text.includes(serviceParam)
+      );
+      if (option) {
+        option.selected = true;
+      }
     }
   </script>
 </body>
